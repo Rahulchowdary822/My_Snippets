@@ -1,0 +1,39 @@
+.heart-beat {
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    margin: 100px;
+    display: flex;
+    position: absolute;
+    top: 30%;
+    left: 41%;
+    animation: beat 1s infinite alternate;
+}
+
+.heart-beat::before,
+.heart-beat::after {
+    content: '';
+    background-color: red;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.heart-beat::after{
+    left: 50px;
+    top: 0;
+}
+.heart-beat::before{
+    top: -50px;
+    left: 0;
+}
+
+@keyframes beat{
+    0%{
+        transform: scale(1) rotate(-45deg);
+    }
+    100%{
+        transform: scale(2) rotate(-45deg);
+    }
+}
